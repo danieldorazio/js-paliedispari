@@ -3,9 +3,20 @@ const parola = prompt("inserisci una parola")
 console.log(parola, parola.length);
 
 
+
+
 // LOGICA
 
-//analizzare parola lettera per lettera
+function wordElem(word) {
+   const wordElem = [];
+    for (let i = 0; i < word.length; i++) {
+        const element = word[i];
+        wordElem.push(element);
+    } 
+    return wordElem;
+    console.log(wordElem);
+}
+
 
 /**
  * funzione che separa lettera per lettera e la restituisce al contrario 
@@ -13,16 +24,46 @@ console.log(parola, parola.length);
  * @returns {string}
  */
 function invertWord(word) {
-    const invertArray = [];
+    const invertArrayElem = [];
     for (let i = word.length - 1; i >= 0; i--) {
         const element = word[i];
-        invertArray.push(element);
+        invertArrayElem.push(element);        
     }
-    return invertArray;
+    return invertArrayElem;
+    console.log(invertArrayElem);
+}
+
+/**
+ * funzione che paragona la userWord con invertWord e definisce se palindroma 
+ * @param {string} word
+ * @param {string} invertWord
+ * @returns {string}
+ */
+function polyndrome(word, invertWord) {
+    let flage = false
+    if (word === invertWord) {
+        flage = true;
+    }
+
+    let result = ""
+    if (flage) {
+        result = "palindromo";        
+    } else {
+        result = "non palindromo";
+    }
+    return result;    
 }
 
 /*******************************/
 
 // INVOCAZIONE
-invertWord(parola);
-console.log(invertWord(parola));
+const invertString = invertWord(parola);
+console.log(invertString);
+
+const wordString = wordElem(parola);
+console.log(wordString);
+
+polyndrome( wordString, invertString);
+console.log(polyndrome("anna", "anna"));
+
+

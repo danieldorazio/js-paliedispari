@@ -15,18 +15,10 @@ Parola in ingresso
 
 **funzione per invertire la parola**
 ciclo che dura la lunchezza della parola 
-- analizzare la parola lettera per lettera
 
-- parolaInvers = riscriverre la parola al conrario
+- invertWord = riscriverre la parola al contrario
     - la legge al contrario
     - ciclo che parte dalla fine e arriva all'inizio
-    index = arr.length -1 
-    index > 0
-    let = arr[index]
-    parolaInver.push(arr[index])
-    i--
-
-
 
 **funzione per definire se è palinbroma**
 - introdurre flag = false
