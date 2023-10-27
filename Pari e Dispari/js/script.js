@@ -1,12 +1,26 @@
 // DATI
 // scelta pari o dispari
-const sceltaUser = prompt("scegli: Pari o Dispari");
-const sceltaUserUpper = sceltaUser.toUpperCase();
-console.log(sceltaUserUpper);
+
+let sceltaUser = "";
+let sceltaUserUpper = "";
+
+do {
+    sceltaUser = prompt("scegli: Pari o Dispari");
+    sceltaUserUpper = sceltaUser.toUpperCase();
+    console.log(sceltaUserUpper);
+
+} while (!(sceltaUserUpper === "PARI" || sceltaUserUpper === "DISPARI"));
+
 
 // scelta del numero
-const userNumber = parseInt(prompt("inserisci un numero tra 1 a 5"));
-console.log(userNumber);
+
+let userNumber = "";
+do {
+    userNumber = parseInt(prompt("inserisci un numero tra 1 a 5"));
+    console.log(userNumber);
+    
+} while (!(userNumber >=1 && userNumber <= 5));
+
 
 // LOGICA
 

@@ -20,8 +20,6 @@ function invertWord(word) {
 }
 
 /***************************************/
-
-
 /**
  * funzione che paragona la userWord con invertWord e definisce se palindroma 
  * @param {string} word
